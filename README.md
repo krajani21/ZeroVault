@@ -1,9 +1,5 @@
 # ZeroVault
 
-![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-![Language: Rust](https://img.shields.io/badge/language-Rust-orange.svg)
-![Status: Active Development](https://img.shields.io/badge/status-active%20development-brightgreen.svg)
-
 A lightweight, offline command-line password manager engineered around the principle that **the host machine should never be trusted with plaintext secrets**. Every byte of sensitive data is encrypted with authenticated encryption before touching disk, and every plaintext key or password is erased from RAM as soon as it is no longer needed.
 
 > Built from scratch in Rust as a security engineering project — no vendor lock-in, no cloud sync, no attack surface beyond what is necessary.
