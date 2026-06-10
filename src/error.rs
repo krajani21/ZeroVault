@@ -8,6 +8,7 @@ pub enum VaultError {
     // separating the two would create an authentication oracle.
     Decryption,
     MalformedBlob,
+    VaultAlreadyExists,
     Io(std::io::Error),
     Serialization(serde_json::Error),
 }
@@ -19,6 +20,7 @@ impl fmt::Display for VaultError {
             VaultError::Encryption => write!(f, "Encryption failed"),
             VaultError::Decryption => write!(f, "Wrong master password or vault is corrupt"),
             VaultError::MalformedBlob => write!(f, "Vault data is malformed"),
+            VaultError::VaultAlreadyExists => write!(f, "A vault already exists at that path"),
             VaultError::Io(e) => write!(f, "I/O error: {e}"),
             VaultError::Serialization(e) => write!(f, "Serialisation error: {e}"),
         }
